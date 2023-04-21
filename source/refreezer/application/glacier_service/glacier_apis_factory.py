@@ -3,10 +3,14 @@ Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 SPDX-License-Identifier: Apache-2.0
 """
 
-from typing import Optional
+from typing import TYPE_CHECKING
 import boto3
-from mypy_boto3_glacier.client import GlacierClient
 from refreezer.application.mocking.mock_glacier_apis import MockGlacierAPIs
+
+if TYPE_CHECKING:
+    from mypy_boto3_glacier.client import GlacierClient
+else:
+    GlacierClient = object
 
 
 class GlacierAPIsFactory:

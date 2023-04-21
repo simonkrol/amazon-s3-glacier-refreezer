@@ -4,7 +4,6 @@ SPDX-License-Identifier: Apache-2.0
 """
 
 from typing import TYPE_CHECKING, Optional
-from mypy_boto3_glacier import GlacierClient
 from refreezer.application.glacier_s3_transfer.download import GlacierDownload
 from refreezer.application.glacier_s3_transfer.upload import S3Upload
 from refreezer.application.hashing.tree_hash import TreeHash
